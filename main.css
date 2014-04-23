@@ -57,6 +57,29 @@ form {
   margin: 0 auto;
 }
 
+.author:last-child {
+  border-bottom: 0;
+  margin-bottom: 1rem;
+}
+
 .quote {
   font-style: italic;
+}
+
+.quote:first-child {
+  margin-top: 1rem;
+}
+
+.single-quote-container {
+  position: relative;
+}
+
+.fa {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+
+.fa:hover {
+  cursor: pointer;
 }

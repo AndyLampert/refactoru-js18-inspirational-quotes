@@ -26,6 +26,10 @@ body {
 	border-bottom: 1px solid grey;
 }
 
+.single-quote-container {
+
+}
+
 form {
 	margin: 0 auto;
 	display: block;
@@ -53,8 +57,27 @@ form {
 	border-bottom: 1px dotted grey;
 	width: 90%;
 	margin: 0 auto; 
+	&:last-child{
+		border-bottom: 0;
+		margin-bottom: 1rem;
+	}
 }
 
 .quote {
 	font-style: italic;
+	&:first-child {
+		margin-top: 1rem;
+	}
+}
+
+.single-quote-container {
+	position: relative;
+}
+.fa  {
+	position: absolute;
+	right: -20px;
+	bottom: 0;
+	&:hover {
+		cursor: pointer;
+	}
 }
