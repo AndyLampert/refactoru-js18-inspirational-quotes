@@ -1,5 +1,9 @@
 $(document).on('ready', function() {
-
+	$('#submit-button').on('click', function(){
+		// take the #input-author
+		// take the #input-quote
+		// put them into .main-quotes-container
+	});
 	// checking for a valid input
 	var isValid = validateInput($('[data-validation="required"]'));	  
 });
