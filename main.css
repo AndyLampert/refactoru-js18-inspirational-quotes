@@ -1,0 +1,55 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1rem;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-container,
+.main-quotes-container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+form {
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+}
+
+.user-input {
+  margin: 1em auto;
+  width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#submit-button {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1rem;
+  width: 300px;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  border-bottom: 1px dotted grey;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.quote {
+  font-style: italic;
+}
