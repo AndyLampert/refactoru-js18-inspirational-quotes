@@ -26,64 +26,35 @@ var data = [{
 	}
 ]
 
-
-
 $(document).on('ready', function() {
-	// delete icon
-	$('.fa').on('click', function(){
+	// delete icon removes .single-quote-container
+	$(document).on('click','.fa',function(){
 		// delete the .single-quote-container associated with this icon
-		$('.single-quote-container').remove();
+		$(this).closest('.single-quote-container').remove();
 	});
-	// submit button
 	$('#submit-button').on('click', function(){
-		// take the #input-quote
+		// variable declarations
 		var quoteVal = $('#input-quote').val();
-		// create new .quote div
-		var newQuoteDiv = $('<div class="quote"></div>');
-		// set its text to #input-quote
-		var newDeleteIcon = $('<i class="fa fa-camera-retro"></i>');
-		newQuoteDiv.text(quoteVal);
-		$('.main-quotes-container').append(newQuoteDiv);
-		$('.single-quote-container').append(newDeleteIcon);
-
-		$('body').append(newDeleteIcon);
-
-		// make sure #input-quote, #input-author is filled in
-		if(quoteVal.length === 0){
-			console.log("didn't input in quote field");
-		} 
-
-		// take the #input-author
 		var authorVal = $('#input-author').val();
-		// create new .author div
+		var mainQuoteContainer = $('.main-quotes-container');
+		var singleQuoteContainer = $('<div class="single-quote-container"></div>');
+		var newQuoteDiv = $('<div class="quote"></div>');
 		var newAuthorDiv = $('<div class="author"></div>');
-		// set text of new .author to #input-author input
+		var newDeleteIcon = $('<i class="fa fa-times"></i>');
+		
+		// text changing
 		newAuthorDiv.text(authorVal);
-		$('.main-quotes-container').append(newAuthorDiv);
+		newQuoteDiv.text(quoteVal);
 
+		// how to debug this?
+		mainQuoteContainer.append(singleQuoteContainer);
+		singleQuoteContainer.append(newQuoteDiv);
+		singleQuoteContainer.append(newAuthorDiv);
+		singleQuoteContainer.append(newDeleteIcon);
+
+		// include validation
+		if(quoteVal.length === 0){
+		} 
 		return false;
 	});
-
-
-// This list should update in real-time when quotes are added, 
-// deleted, or rated.
-
-	// checking for a valid input
-	// var isValid = validateInput($('[data-validation="required"]'));	  
 });
-
-// Next step - validate input fields
-
-// step 4
-// User can click on the author of a quote to go to a separate 
-// page/sceeen that shows all quotes from that person.
-
-// var validateInput = function(input) {
-// 		var allValid = true;
-// 		input.each(function() {
-// 			var inputValid = $(this).val() !== '';
-// 			$(this).closest('.form-group').addClass(inputValid ? 'valid' : 'invalid');
-// 			allValid &= inputValid;
-// 		})
-// 		return !!allValid;
-// 	};
