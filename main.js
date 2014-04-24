@@ -96,21 +96,21 @@ $(document).on('ready', function() {
 		// add .star:lt(number of star hovered on) selector
 		// highlights current star and all stars below it
 		// if you click on a star, it keeps the highlight
-		var clickedStar = $(this);
-		clickedStar.addClass('addedStar');
+		var clickedStar = $(this).index();
+		// clickedStar.addClass('addedStar');
+		
+		
+		// I want just the star classes just inside of closest container
+		
+		$( this )	
+			.closest('.single-quote-container')
+			.find('.star')
+			.removeClass('addedStar');
 
-
+		$( this )
+			.closest('.single-quote-container')
+			.find('.star:lt(' + clickedStar + ')')
+			.add( $(this) )
+			.addClass('addedStar');
 	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
