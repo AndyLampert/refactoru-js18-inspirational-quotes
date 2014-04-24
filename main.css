@@ -87,3 +87,7 @@ form {
 .fa:hover {
   cursor: pointer;
 }
+
+.author:hover {
+  cursor: pointer;
+}

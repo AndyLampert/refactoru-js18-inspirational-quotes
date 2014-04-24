@@ -9,6 +9,10 @@ var data = [{
 	{
 		author: 'Tyrion',
 		quote: 'Even a stunted, twisted, ugly little boy can look down over the world when he\'s seated on a dragon\'s back.'
+	},
+	{
+		author: 'Cersei',
+		quote: 'When you play the game of thrones, you win or you die.'
 	}
 ]
 
@@ -32,9 +36,9 @@ var addQuote = function(quoteObj) {
 
 $(document).on('ready', function() {
 	// next step is to make this a loop so that it works for any number of items in the array
-	addQuote(data[0]);
-	addQuote(data[1]);
-	addQuote(data[2]);
+	for(var i=0;i<data.length;i++){
+		addQuote(data[i]);
+	}
 
 	// delete icon removes .single-quote-container
 	$(document).on('click','.fa',function(){
@@ -48,7 +52,7 @@ $(document).on('ready', function() {
 		var currentAuthor = $(this).text();
 		var filterVar = $('.single-quote-container').toArray().filter(function(item){
 				// if the author matches the one we're searching for, return true
-				var checkAuthor = $(item).find('.author').text()
+				var checkAuthor = $(item).find('.author').text();
 				if(currentAuthor !== checkAuthor ){
 					return true;
 				}
