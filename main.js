@@ -21,10 +21,10 @@ var addQuote = function(quoteObj) {
 	var singleQuoteContainer = $('<div class="single-quote-container"></div>');
 	var newQuoteDiv = $('<div class="quote"></div>');
 	var newAuthorDiv = $('<div class="author"></div>');
-	var newDeleteIcon = $('<i class="fa fa-times fa-2x"></i>');
+	var newDeleteIcon = $('<i class="fa fa-times delete fa-2x"></i>');
 
 	// create star ratings
-	var starRating = $('<div class="rating"><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span></div>')
+	var starRating = $('<div class="rating"><span class="star"><i class="fa fa-star"></i></span><span class="star"><i class="fa fa-star"></i></span><span class="star"><i class="fa fa-star"></i></span><span class="star"><i class="fa fa-star"></i></span><span class="star"><i class="fa fa-star"></i></span></div>');
 
 	// append stars to each quote
 	singleQuoteContainer.append(starRating);
@@ -38,8 +38,6 @@ var addQuote = function(quoteObj) {
 	singleQuoteContainer.append(newQuoteDiv);
 	singleQuoteContainer.append(newAuthorDiv);
 	singleQuoteContainer.append(newDeleteIcon);
-
-
 }
 
 $(document).on('ready', function() {
@@ -49,7 +47,7 @@ $(document).on('ready', function() {
 	}
 
 	// delete icon removes .single-quote-container
-	$(document).on('click','.fa',function(){
+	$(document).on('click','.delete',function(){
 		// delete the .single-quote-container associated with this icon
 		$(this).closest('.single-quote-container').remove();
 	});
@@ -66,8 +64,11 @@ $(document).on('ready', function() {
 				}
 				return false;
 			});
+
+		// prints out the single-quote-container's that don't have the same author (as the one clicked on)
 		console.log(filterVar);
 
+		// hide the containers that don't have the same author as the one clicked on
 		for(var i=0;i<filterVar.length;i++){
 			console.log($ (filterVar[i]) );
 			$(filterVar[i]).hide();
@@ -91,4 +92,25 @@ $(document).on('ready', function() {
 		} 
 		return false;
 	});
+	$(document).on('click', '.star', function() {
+		// add .star:lt(number of star hovered on) selector
+		// highlights current star and all stars below it
+		// if you click on a star, it keeps the highlight
+		var clickedStar = $(this);
+		clickedStar.addClass('addedStar');
+
+
+	});
 });
+
+
+
+
+
+
+
+
+
+
+
+

@@ -78,13 +78,13 @@ form {
   position: relative;
 }
 
-.fa {
+.delete {
   position: absolute;
   right: -20px;
   bottom: 0;
 }
 
-.fa:hover {
+.delete:hover {
   cursor: pointer;
 }
 
@@ -99,4 +99,8 @@ form {
 
 .rating:hover {
   cursor: pointer;
+}
+
+.addedStar {
+  color: gold;
 }
