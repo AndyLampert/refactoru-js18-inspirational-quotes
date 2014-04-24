@@ -42,6 +42,10 @@ form {
   max-height: 300px;
 }
 
+#input-author {
+  border: 1px solid grey;
+}
+
 #submit-button {
   margin: 0 auto;
   display: block;
