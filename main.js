@@ -12,7 +12,7 @@ var data = [{
 	},
 	{
 		author: 'Cersei',
-		quote: 'When you play the game of thrones, you win or you die.'
+		quote: 'When you play the game of thrones, you win or you die. There is no middle ground.'
 	}
 ]
 
@@ -23,6 +23,12 @@ var addQuote = function(quoteObj) {
 	var newAuthorDiv = $('<div class="author"></div>');
 	var newDeleteIcon = $('<i class="fa fa-times fa-2x"></i>');
 
+	// create star ratings
+	var starRating = $('<div class="rating"><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span></div>')
+
+	// append stars to each quote
+	singleQuoteContainer.append(starRating);
+
 	// text changing
 	newAuthorDiv.text(quoteObj.author);
 	newQuoteDiv.text(quoteObj.quote);
@@ -32,6 +38,8 @@ var addQuote = function(quoteObj) {
 	singleQuoteContainer.append(newQuoteDiv);
 	singleQuoteContainer.append(newAuthorDiv);
 	singleQuoteContainer.append(newDeleteIcon);
+
+
 }
 
 $(document).on('ready', function() {

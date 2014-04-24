@@ -91,3 +91,12 @@ form {
 .author:hover {
   cursor: pointer;
 }
+
+.rating {
+  float: left;
+  font-size: 150%;
+}
+
+.rating:hover {
+  cursor: pointer;
+}
