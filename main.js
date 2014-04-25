@@ -113,15 +113,34 @@ $(document).on('ready', function() {
 	});
 	// click handler for ascending sort
 	$(document).on('click','#asc-btn',function(){
-		console.log('asc')
 		// sort the quotes based on highest rating 
+			console.log( $('.single-quote-container')
+			.find('.addedStar')
+			.toArray()
+			)
+			// .filter(function(item){
+			// 	var checkRating = $(item).find('.star').val(); // NOT .VAL(), SO WHAT?
+
+			// }); 
+
+		//   SORT STEPS
+		//   1. get all of the items
+		//   2. convert to native array (like we did on the filter)
+		//   3. run the native sort
+		//   4. then reappeand all the items into the list
+
+		//   var checkAuthor = $(item).find('.author').text();
+		// if(currentAuthor !== checkAuthor ){
+		// 	return true;
+		// }
+		// return false;
 	});
 
 	// click handler for descending sort
 	$(document).on('click','#dsc-btn',function(){
-		console.log('desc')
 		// sort the quotes based on lowest rating
-	})
+
+	});
 
 });
 

@@ -26,6 +26,7 @@ body {
 
 .form-container {
   top: 0;
+  background-color: #ecf0f1;
 }
 
 .form-container,
@@ -34,6 +35,20 @@ body {
   display: block;
   margin: 0 auto;
   border-bottom: 1px solid grey;
+}
+
+.form-container {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.main-quotes-container {
+  width: 50%;
+  z-index: 1;
+  margin-top: 250px;
 }
 
 form {
@@ -59,10 +74,6 @@ form {
   display: block;
   margin-bottom: 1rem;
   width: 350px;
-}
-
-.form-container {
-  position: relative;
 }
 
 i.show-input,
