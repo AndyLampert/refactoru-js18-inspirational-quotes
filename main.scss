@@ -26,10 +26,6 @@ body {
 	border-bottom: 1px solid grey;
 }
 
-.single-quote-container {
-
-}
-
 form {
 	margin: 0 auto;
 	display: block;
@@ -55,6 +51,30 @@ form {
 	width: 300px
 }
 
+.form-container {
+	position: relative;
+}
+
+#asc-btn,
+#dsc-btn {
+	position: absolute;
+	right: 0;
+	width: 200px;
+}
+
+.fa-sort-alpha-asc,
+.fa-sort-alpha-desc {
+	padding-left: 1rem;
+}
+
+#asc-btn {
+	bottom: 3rem;
+}
+
+#dsc-btn {
+	bottom: 1rem;
+}
+
 .author {
 	text-align: right;
 	font-weight: bold;
@@ -69,6 +89,9 @@ form {
 
 .quote {
 	font-style: italic;
+	width: 60%;
+	display: block;
+	margin: 0 auto; 
 	&:first-child {
 		margin-top: 1rem;
 	}
@@ -101,4 +124,3 @@ form {
 .addedStar {
 	color: gold;
 }
-

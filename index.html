@@ -8,15 +8,28 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="form-container"> 
+
+		<div class="form-container"> 
+			<button id="asc-btn">Sort Ascending<i class="fa fa-sort-alpha-asc"></i> </button>
+			<button id="dsc-btn">Sort Decending<i class="fa fa-sort-alpha-desc"></i></button>
 		<form action="">
 			<div class="page-title">Game of Thrones Quotes!</div>
-			Who said it? <input id="input-author" class="user-input" data-validation="required" type="text">
-			What'd they say? <textarea id="input-quote" class="user-input" data-validation="required" type="text"></textarea>
+			<h4>Who said it? </h4>
+			<select id='input-author' class="user-input">
+				<option>Bronn</option>
+				<option>Cersei</option>
+				<option>Tyrion</option>
+				<option>Yggrit</option>
+			</select>
+			<!-- <input id="input-author" class="user-input" data-validation="required" type="text"> -->
+			<h4>What'd they say?</h4> <textarea id="input-quote" class="user-input" data-validation="required" type="text"></textarea>
 			<button id='submit-button'>Submit Quote!</button>
 		</form>
+		
 	</div>
 	<div class="main-quotes-container">
+
+	
 
 <!-- <select>
   <option>Bronn</option>
