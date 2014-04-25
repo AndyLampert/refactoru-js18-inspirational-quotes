@@ -28,6 +28,10 @@ body {
   width: 900px;
 }
 
+.single-quote-container {
+  position: relative;
+}
+
 .form-container {
   top: 0;
   background-color: #ecf0f1;

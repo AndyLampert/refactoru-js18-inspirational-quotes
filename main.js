@@ -149,31 +149,47 @@ $(document).on('ready', function() {
 	// click handler for random quote button
 	$(document).on('click','#random-quote-btn',function(){
 
-		// var randomQuote = function(){
-		// 	$('.single-quote-container').length;
-		// }
-
-		// var random = $('.single-quote-container');
-		// $(random[Math.floor(Math.random()*random.length)]);
-
-		// grab all the quote containers
-		// pick one at random
-		var randomQuote = $('.single-quote-container').length;
-		var randomCalc = Math.round(Math.random()*randomQuote);
-
-		console.log(randomCalc);
-
 	});
-	
+
 	// click handler to open the lightbox (random quote)
 	$(document).on('click','#random-quote-btn',function(){
 		$('.lightbox-container').css('display','block');
+
+		// variable declarations for lightbox
+		var randomQuote = $('.single-quote-container').length;
+		var randomCalc = Math.round(Math.random()*randomQuote);
+		var grabRandomQuote = $('.single-quote-container').eq(randomCalc);
+		var randomQuoteText = grabRandomQuote.find('.quote').text();
+		var randomAuthorText = grabRandomQuote.find('.author').text();
+
+		// logs the author and quote text values of a random quote container
+		console.log(randomAuthorText);
+		console.log(randomQuoteText);
+
+		$('.lightbox-container').find('.author').append(randomAuthorText);
+		$('.lightbox-container').find('.quote').append(randomQuoteText);
+		
+		// randomQuoteText
+
+		console.log('======================');
+		console.log(grabRandomQuote, (grabRandomQuote).find('.quote').text());
+
+		// append quote elements to the lightbox
+
+		$('.lightbox-container').find('.quote').text();
+		$('.lightbox-container').find('.author').text();
+
 	});
 
 	// click handler to close the lightbox
 	$(document).on('click','.close-lightbox-btn',function(){
+		// bring up a lightbox when user clicks on random quote
 		$(this).closest('.lightbox-container').css('display','none');
+		
+		
+
 	});
+
 });
 
 
