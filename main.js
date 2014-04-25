@@ -163,10 +163,16 @@ $(document).on('ready', function() {
 
 		console.log(randomCalc);
 
-		
+	});
+	
+	// click handler to open the lightbox (random quote)
+	$(document).on('click','#random-quote-btn',function(){
+		$('.lightbox-container').css('display','block');
+	});
 
-		// take that container and display its contents in a popup
-
+	// click handler to close the lightbox
+	$(document).on('click','.close-lightbox-btn',function(){
+		$(this).closest('.lightbox-container').css('display','none');
 	});
 });
 

@@ -31,6 +31,7 @@ body {
 .form-container {
   top: 0;
   background-color: #ecf0f1;
+  position: relative;
 }
 
 .form-container,
@@ -97,17 +98,17 @@ i.show-input {
   top: 0;
 }
 
+.fa-sort-alpha-asc,
+.fa-sort-alpha-desc {
+  padding-left: 1rem;
+}
+
 #asc-btn,
 #dsc-btn,
 #random-quote-btn {
   position: absolute;
   right: 0;
   width: 200px;
-}
-
-.fa-sort-alpha-asc,
-.fa-sort-alpha-desc {
-  padding-left: 1rem;
 }
 
 #asc-btn {
@@ -146,10 +147,6 @@ i.show-input {
   margin-top: 1rem;
 }
 
-.single-quote-container {
-  position: relative;
-}
-
 .delete {
   position: absolute;
   right: -20px;
@@ -182,10 +179,11 @@ i.show-input {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .lightbox {
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   height: 100%;
   width: 100%;

@@ -3,20 +3,20 @@ $cloudy: #ecf0f1;
 $lato: 'Lato', 'sans-serif';
 $opensan: 'Open Sans', 'sans-serif';
 
+// global styles
 * {
 	box-sizing: border-box;
 }
-
 html, h1, h2, h3, h4 {
 	margin: 0 auto;
 	padding: 0;
 	font-family: $opensan;
 }
-
 body {
 	margin: 1rem;
 }
 
+// Page title
 .page-title {
 	text-align: center;
 	font-weight: bold;
@@ -27,11 +27,14 @@ body {
 	width: 900px;
 }
 
-.form-container{
+// Container styles
+.single-quote-container {
+}
+.form-container {
 	top: 0;
 	background-color: $cloudy;
+	position: relative;
 }
-
 .form-container,
 .main-quotes-container {
 	width: 80%;
@@ -46,19 +49,18 @@ body {
 	right: 0;
 	z-index: 2;
 }
-
 .main-quotes-container {
 	width: 50%;
 	z-index: 1;
 	margin-top: 300px;
 }
 
+// Input form styles
 form {
 	margin: 0 auto;
 	display: block;
 	width: 350px;
 }
-
 .user-input {
 	margin: 0 auto;
 	margin-bottom: 1rem;
@@ -66,22 +68,17 @@ form {
 	max-width: 350px;
 	max-height: 300px;
 }
-
 #input-author {
 	border: 1px solid grey;
 }
 
+// buttons and icons
 #submit-button {
 	margin: 0 auto;
 	display: block;
 	margin-bottom: 1rem;
 	width: 350px
 }
-
-// .form-container {
-// 	position: relative;
-// }
-
 i.show-input,
 i.hide-input {
 	position: absolute;
@@ -91,12 +88,16 @@ i.hide-input {
 	cursor: pointer;
 	}
 }
-
 i.show-input {
 	bottom: auto;
 	top: 0;
 }
+.fa-sort-alpha-asc,
+.fa-sort-alpha-desc {
+	padding-left: 1rem;
+}
 
+// sorting buttons
 #asc-btn,
 #dsc-btn,
 #random-quote-btn {
@@ -104,24 +105,18 @@ i.show-input {
 	right: 0;
 	width: 200px;
 }
-
-.fa-sort-alpha-asc,
-.fa-sort-alpha-desc {
-	padding-left: 1rem;
-}
-
 #asc-btn {
 	bottom: 3rem;
 }
-
 #dsc-btn {
 	bottom: 1rem;
 }
-
 #random-quote-btn {
 	bottom: 5rem;
 }
 
+
+// styles for quotes and authors
 .author {
 	text-align: right;
 	font-weight: bold;
@@ -133,7 +128,6 @@ i.show-input {
 		margin-bottom: 1rem;
 	}
 }
-
 .quote {
 	font-style: italic;
 	width: 60%;
@@ -143,10 +137,6 @@ i.show-input {
 		margin-top: 1rem;
 	}
 }
-
-.single-quote-container {
-	position: relative;
-}
 .delete {
 	position: absolute;
 	right: -20px;
@@ -155,11 +145,11 @@ i.show-input {
 		cursor: pointer;
 	}
 }
-
 .author:hover {
 	cursor: pointer;
 }
 
+// star styles
 .rating {
 	float: left;
 	font-size: 150%;
@@ -178,15 +168,14 @@ i.show-input {
      position: absolute;
      top: 0;
      left: 0;
+     display: none;
 }
-
 .lightbox {
-     background-color: grey;
+     background-color: rgba(0,0,0,.3);
      position: fixed;
      height: 100%;
      width: 100%;
 }
-
 .lightbox-alert {
 	margin: 10% auto;
 	border-radius: 5px;
@@ -196,8 +185,6 @@ i.show-input {
 	padding: 2rem;
 	padding-bottom: 5rem;
 }
-
-
 .close-lightbox-btn {
 	background-color: red;
 	opacity: .6;
