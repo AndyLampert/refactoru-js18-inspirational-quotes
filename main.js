@@ -114,34 +114,38 @@ $(document).on('ready', function() {
 	// click handler for ascending sort
 	$(document).on('click','#asc-btn',function(){
 		// sort the quotes based on highest rating 
-			console.log( $('.single-quote-container')
-			.find('.addedStar')
-			.toArray()
-			)
-			// .filter(function(item){
-			// 	var checkRating = $(item).find('.star').val(); // NOT .VAL(), SO WHAT?
+			var sortAsc = $('.single-quote-container')
+				.toArray()
+				.sort(function(a,b){
+					// finds the number of golden stars in a given container
+					var aStars = $(a).find('.addedStar').length;
+					var bStars = $(b).find('.addedStar').length;
+					// highest to lowest
+					return bStars - aStars; 
+				});  // takes compare function, a to b
+				// logs the order of added stars (greatest to least)
+				console.log(sortAsc);
+				for (var i = 0; i < sortAsc.length; i++) {
+					$('.main-quotes-container').append(sortAsc[i]);
+				};
 
-			// }); 
-
-		//   SORT STEPS
-		//   1. get all of the items
-		//   2. convert to native array (like we did on the filter)
-		//   3. run the native sort
-		//   4. then reappeand all the items into the list
-
-		//   var checkAuthor = $(item).find('.author').text();
-		// if(currentAuthor !== checkAuthor ){
-		// 	return true;
-		// }
-		// return false;
 	});
-
 	// click handler for descending sort
 	$(document).on('click','#dsc-btn',function(){
 		// sort the quotes based on lowest rating
-
+		var sortDesc = $('.single-quote-container')
+			.toArray()
+			.sort(function(a,b){
+				var aStars = $(a).find('.addedStar').length;
+				var bStars = $(b).find('.addedStar').length;
+				return aStars - bStars;
+			});
+			
+			console.log(sortDesc);
+			for (var i = 0; i < sortDesc.length; i++) {
+				$('.main-quotes-container').append(sortDesc[i]);
+			};
 	});
-
 });
 
 

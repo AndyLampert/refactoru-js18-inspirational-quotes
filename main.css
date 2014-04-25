@@ -93,6 +93,7 @@ i.hide-input:hover {
 }
 
 i.show-input {
+  bottom: auto;
   top: 0;
 }
 
