@@ -93,24 +93,45 @@ $(document).on('ready', function() {
 		return false;
 	});
 	$(document).on('click', '.star', function() {
-		// add .star:lt(number of star hovered on) selector
-		// highlights current star and all stars below it
-		// if you click on a star, it keeps the highlight
+		// grabs the index of the star clicked on
 		var clickedStar = $(this).index();
-		// clickedStar.addClass('addedStar');
 		
-		
-		// I want just the star classes just inside of closest container
-		
-		$( this )	
+		// removes the golden star (.addedStar) from all .star's when a .star is clicked
+		$( this )
 			.closest('.single-quote-container')
 			.find('.star')
 			.removeClass('addedStar');
 
+		// adds golden star to the clicked star
+		// PLUS all the .star's less than the clicked one
+		// AND adds one more (to include current)
 		$( this )
 			.closest('.single-quote-container')
 			.find('.star:lt(' + clickedStar + ')')
 			.add( $(this) )
 			.addClass('addedStar');
 	});
+	// click handler for ascending sort
+	$(document).on('click','#asc-btn',function(){
+		console.log('asc')
+		// sort the quotes based on highest rating 
+	});
+
+	// click handler for descending sort
+	$(document).on('click','#dsc-btn',function(){
+		console.log('desc')
+		// sort the quotes based on lowest rating
+	})
+
 });
+
+
+
+
+
+
+
+
+
+
+
