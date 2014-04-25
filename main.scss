@@ -1,5 +1,7 @@
 $brightStar: #f1c40f;
 $cloudy: #ecf0f1;
+$lato: 'Lato', 'sans-serif';
+$opensan: 'Open Sans', 'sans-serif';
 
 * {
 	box-sizing: border-box;
@@ -8,6 +10,7 @@ $cloudy: #ecf0f1;
 html, h1, h2, h3, h4 {
 	margin: 0 auto;
 	padding: 0;
+	font-family: $opensan;
 }
 
 body {
@@ -17,16 +20,18 @@ body {
 .page-title {
 	text-align: center;
 	font-weight: bold;
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	font-size: 3.5rem;
+	margin: 1rem auto;
+	display: block;
+	font-family: $lato;
+	width: 900px;
+
 }
 
 .form-container{
 	top: 0;
 	background-color: $cloudy;
 }
-
-
 
 .form-container,
 .main-quotes-container {
@@ -46,7 +51,7 @@ body {
 .main-quotes-container {
 	width: 50%;
 	z-index: 1;
-	margin-top: 250px;
+	margin-top: 300px;
 }
 
 form {
