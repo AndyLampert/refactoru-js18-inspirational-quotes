@@ -156,7 +156,7 @@ $(document).on('ready', function() {
 		$('.lightbox-container').css('display','block');
 
 		// variable declarations for lightbox
-		var randomQuote = $('.single-quote-container').length;
+		var randomQuote = $('.single-quote-container').length-1;
 		var randomCalc = Math.round(Math.random()*randomQuote);
 		var grabRandomQuote = $('.single-quote-container').eq(randomCalc);
 		var randomQuoteText = grabRandomQuote.find('.quote').text();
@@ -166,11 +166,13 @@ $(document).on('ready', function() {
 		console.log(randomAuthorText);
 		console.log(randomQuoteText);
 
+		// print out the random number
+		console.log(randomCalc);
+
 		$('.lightbox-container').find('.author').append(randomAuthorText);
 		$('.lightbox-container').find('.quote').append(randomQuoteText);
 		
 		// randomQuoteText
-
 		console.log('======================');
 		console.log(grabRandomQuote, (grabRandomQuote).find('.quote').text());
 
@@ -178,7 +180,6 @@ $(document).on('ready', function() {
 
 		$('.lightbox-container').find('.quote').text();
 		$('.lightbox-container').find('.author').text();
-
 	});
 
 	// click handler to close the lightbox
@@ -186,11 +187,18 @@ $(document).on('ready', function() {
 		// bring up a lightbox when user clicks on random quote
 		$(this).closest('.lightbox-container').css('display','none');
 		
-		
+		// clear the lightbox text
+		$('.lightbox-container').find('.author').text('');
+		$('.lightbox-container').find('.quote').text('');
 
 	});
 
 });
+
+// PROBLEMS
+// sometimes the random quote shows nothing
+// if I click an author's name inside the lightbox, it formats the data on the page
+// also need to remove the hover state on the author in the lightbox
 
 
 

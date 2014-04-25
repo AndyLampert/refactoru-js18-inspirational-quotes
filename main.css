@@ -30,6 +30,13 @@ body {
 
 .single-quote-container {
   position: relative;
+  margin: 1rem;
+}
+
+.single-quote-container:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .form-container {
@@ -55,7 +62,7 @@ body {
 }
 
 .main-quotes-container {
-  width: 50%;
+  width: 70%;
   z-index: 1;
   margin-top: 300px;
 }
@@ -130,9 +137,9 @@ i.show-input {
 .author {
   text-align: right;
   font-weight: bold;
-  border-bottom: 1px dotted grey;
-  width: 90%;
   margin: 0 auto;
+  padding-bottom: .4rem;
+  float: left;
 }
 
 .author:last-child {
@@ -140,11 +147,16 @@ i.show-input {
   margin-bottom: 1rem;
 }
 
+.author:hover {
+  cursor: pointer;
+}
+
 .quote {
   font-style: italic;
+  float: left;
   width: 60%;
   display: block;
-  margin: 0 auto;
+  margin: 0 5%;
 }
 
 .quote:first-child {
@@ -152,16 +164,12 @@ i.show-input {
 }
 
 .delete {
-  position: absolute;
-  right: -20px;
-  bottom: 0;
+  float: right;
+  position: relative;
+  top: -8px;
 }
 
 .delete:hover {
-  cursor: pointer;
-}
-
-.author:hover {
   cursor: pointer;
 }
 
@@ -201,6 +209,12 @@ i.show-input {
   width: 60%;
   padding: 2rem;
   padding-bottom: 5rem;
+}
+
+.lightbox-alert:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .close-lightbox-btn {
