@@ -4,20 +4,32 @@
   <meta charset="utf-8">
   <title>Inspirational Quotes</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-		<div class="hide-form-container">
-		
+		<!-- LIGHTBOX -->
+		<div class="lightbox-container">
+		     <div class="lightbox">
+		          <div class="lightbox-alert">
+		               <h3>Hello</h3>
+		               <p>content</p>
+			          <div class="close-lightbox">
+			              <a class="close-lightbox-btn">Close</a>
+			          </div>
+		          </div>
+		     </div>
 		</div>
+
 		<div class="form-container"> 
 			<div class="page-title">Game of Thrones Quotes!</div>
 			<i class="show-input fa fa-chevron-circle-down fa-5x"></i>
 			<i class="hide-input fa fa-chevron-circle-up fa-5x"></i>
-			<button id="asc-btn">Sort Ascending<i class="fa fa-sort-alpha-asc"></i> </button>
+			<btn id="random-quote-btn">Show me a Random Quote</button>
+			<button id="asc-btn">Sort Ascending<i class="fa fa-sort-alpha-asc"></i></button>
 			<button id="dsc-btn">Sort Decending<i class="fa fa-sort-alpha-desc"></i></button>
 		<form action="">
 			<h4>Who said it? </h4>
@@ -35,14 +47,12 @@
 	</div>
 	<div class="main-quotes-container">
 
-	
-
-<!-- <select>
-  <option>Bronn</option>
-  <option>Cersei</option>
-  <option>Tyrion</option>
-  <option>Yggrit</option>
-</select> -->
+		<!-- <select>
+		  <option>Bronn</option>
+		  <option>Cersei</option>
+		  <option>Tyrion</option>
+		  <option>Yggrit</option>
+		</select> -->
 
 		<!-- <div class="single-quote-container">
 		<i class="fa fa-times fa-2x"></i>
@@ -69,7 +79,9 @@
 		</div> -->
 
 	</div>
+  
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
 
 </body>

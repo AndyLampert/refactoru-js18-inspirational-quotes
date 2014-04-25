@@ -146,6 +146,28 @@ $(document).on('ready', function() {
 				$('.main-quotes-container').append(sortDesc[i]);
 			};
 	});
+	// click handler for random quote button
+	$(document).on('click','#random-quote-btn',function(){
+
+		// var randomQuote = function(){
+		// 	$('.single-quote-container').length;
+		// }
+
+		// var random = $('.single-quote-container');
+		// $(random[Math.floor(Math.random()*random.length)]);
+
+		// grab all the quote containers
+		// pick one at random
+		var randomQuote = $('.single-quote-container').length;
+		var randomCalc = Math.round(Math.random()*randomQuote);
+
+		console.log(randomCalc);
+
+		
+
+		// take that container and display its contents in a popup
+
+	});
 });
 
 
