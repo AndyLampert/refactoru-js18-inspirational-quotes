@@ -50,6 +50,8 @@ $(document).on('ready', function() {
 	$(document).on('click','.delete',function(){
 		// delete the .single-quote-container associated with this icon
 		$(this).closest('.single-quote-container').remove();
+		// add in an undo option
+		
 	});
 
 	// delegated event click handler for authors
@@ -146,10 +148,6 @@ $(document).on('ready', function() {
 				$('.main-quotes-container').append(sortDesc[i]);
 			};
 	});
-	// click handler for random quote button
-	$(document).on('click','#random-quote-btn',function(){
-
-	});
 
 	// click handler to open the lightbox (random quote)
 	$(document).on('click','#random-quote-btn',function(){
@@ -199,14 +197,4 @@ $(document).on('ready', function() {
 // sometimes the random quote shows nothing
 // if I click an author's name inside the lightbox, it formats the data on the page
 // also need to remove the hover state on the author in the lightbox
-
-
-
-
-
-
-
-
-
-
 
